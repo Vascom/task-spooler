@@ -30,14 +30,14 @@ chmod +x configure
 
 %install
 make PREFIX=%{buildroot}/usr install
-mv %{buildroot}%{_bindir}/ts %{buildroot}%{_bindir}/task-spooler
+mv %{buildroot}%{_bindir}/ts %{buildroot}%{_bindir}/tsp
 mv %{buildroot}%{_mandir}/man1/ts.1 %{buildroot}%{_mandir}/man1/tsp.1
 
 
 %files
 %license COPYING
 %doc Changelog README TRICKS PROTOCOL
-%{_bindir}/%{name}
+%{_bindir}/tsp
 %{_mandir}/man1/tsp.1.*
 
 
